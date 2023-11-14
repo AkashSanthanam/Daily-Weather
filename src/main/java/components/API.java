@@ -46,14 +46,46 @@ public class API {
         Gson gson = new Gson();
         return gson.fromJson(response.body(), Weather.class); 
     }
+
+
+    public Weather get_forecast(String _q) throws Exception{
+
+        String url = "http://api.weatherapi.com/v1/forecast.json?key=" + API_KEY + "&q=" + _q + "&days=2&aqi=no&alerts=no"; 
+
+        HttpRequest request = HttpRequest.newBuilder()
+                              .GET()
+                              .uri(new URI(url))
+                              .timeout(Duration.ofSeconds(5))
+                              .setHeader("Weather", "GET")
+                              .build(); 
+
+
+
+        HttpResponse <String> response = CLIENT.send(request, BodyHandlers.ofString()); 
+         // Parse JSON string
+        // JsonElement jsonElement = JsonParser.parseString(response.body()); 
+
+        // Convert JSON to a pretty-printed string
+        // Gson gsonP = new GsonBuilder().setPrettyPrinting().create();
+        // String jsonOuput = gsonP.toJson(jsonElement);
+        // System.out.println(jsonOuput);
+        
+        // Storing Json into Java Object using Gson 
+        Gson gson = new Gson();
+        return gson.fromJson(response.body(), Weather.class); 
+    }
     
     public static void main(String[] args) throws Exception{
 
             API test = new API();
-            Weather weatherData = test.get_weather("London");
-            System.out.println("Country: " + weatherData.get_location().get_country() + "\n");
-            System.out.println("Temperature: " + weatherData.get_current().get_tempc() + "\n");
-            System.out.println("Feels Like " + weatherData .get_current().get_feelslikec() + "\n");
+            // Weather weatherData = test.get_weather("London");
+            // System.out.println("Country: " + weatherData.get_location().get_country() + "\n");
+            // System.out.println("Temperature: " + weatherData.get_current().get_tempc() + "\n");
+            // System.out.println("Feels Like " + weatherData .get_current().get_feelslikec() + "\n");
+            Weather forecastData = test.get_forecast("Toronto"); 
+            System.out.println("Forecast Day 1# " + forecastData.get_Forecast().get_ForecastDays().get(0));
+            System.out.println("Forecast Day 2# " + forecastData.get_Forecast().get_ForecastDays().get(1));
+
         
     }
 
