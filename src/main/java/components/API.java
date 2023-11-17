@@ -85,7 +85,7 @@ public class API {
             Weather forecastData = test.get_forecast("Toronto"); 
             System.out.println("Forecast Day 1# " + forecastData.get_Forecast().get_ForecastDays().get(0));
             System.out.println("Forecast Day 2# " + forecastData.get_Forecast().get_ForecastDays().get(1));
-
+                
         
     }
 

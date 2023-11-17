@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane prefHeight="500.0" prefWidth="750.0">
+         <left>
+            <VBox prefHeight="500.0" prefWidth="172.0" style="-fx-background-color: #282828;" stylesheets="@../../../../css/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <MenuButton alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="174.0" stylesheets="@css/style.css" text="Favorite Locations" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/Favorites.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuButton>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <Pane prefHeight="558.0" prefWidth="578.0" style="-fx-background-color: #1E1E1E; -fx-border-color: #1A1A1A; -fx-border-insets: 1 0 0 0;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="553.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/appicon.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="451.0" layoutY="4.0" text="Daily Weather" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox focusTraversable="true" layoutX="14.0" layoutY="14.0" prefHeight="24.0" prefWidth="188.0" style="-fx-background-color: #404040; -fx-background-radius: 10;">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <effect>
+                        <Glow>
+                           <input>
+                              <Glow />
+                           </input>
+                        </Glow>
+                     </effect>
+                     <children>
+                        <TextField prefHeight="0.0" prefWidth="175.0" promptText="Search a location" style="-fx-background-color: #404040; -fx-text-fill: #FFFFFF;" />
+                     </children>
+                  </HBox>
+                  <Button layoutX="214.0" layoutY="15.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="9.0" style="-fx-background-color: #1E1E1E; -fx-background-radius: 10;" textFill="WHITE" />
+                  <ImageView fitHeight="22.0" fitWidth="27.0" layoutX="211.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/Search.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
