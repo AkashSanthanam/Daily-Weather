@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
@@ -13,13 +14,15 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <BorderPane prefHeight="500.0" prefWidth="750.0">
          <left>
-            <VBox prefHeight="500.0" prefWidth="172.0" style="-fx-background-color: #282828;" stylesheets="@../../../../css/style.css" BorderPane.alignment="CENTER">
+            <VBox prefHeight="500.0" prefWidth="172.0" style="-fx-background-color: #282828;" BorderPane.alignment="CENTER">
                <children>
                   <MenuButton alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="174.0" stylesheets="@css/style.css" text="Favorite Locations" textFill="WHITE">
                      <font>
@@ -43,6 +46,9 @@
                      <image>
                         <Image url="@icons/appicon.png" />
                      </image>
+                     <effect>
+                        <Glow />
+                     </effect>
                   </ImageView>
                   <Label layoutX="451.0" layoutY="4.0" text="Daily Weather" textFill="WHITE">
                      <font>
@@ -61,15 +67,499 @@
                         </Glow>
                      </effect>
                      <children>
-                        <TextField prefHeight="0.0" prefWidth="175.0" promptText="Search a location" style="-fx-background-color: #404040; -fx-text-fill: #FFFFFF;" />
+                        <TextField prefHeight="0.0" prefWidth="175.0" promptText="Search a Location" style="-fx-background-color: #404040; -fx-text-fill: #FFFFFF;" />
                      </children>
                   </HBox>
-                  <Button layoutX="214.0" layoutY="15.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="9.0" style="-fx-background-color: #1E1E1E; -fx-background-radius: 10;" textFill="WHITE" />
-                  <ImageView fitHeight="22.0" fitWidth="27.0" layoutX="211.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                  <Button layoutX="204.0" layoutY="20.0" minHeight="14.0" minWidth="47.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="47.0" style="-fx-background-color: #1E1E1E; -fx-background-radius: 1;" styleClass="search-icon-button" textFill="WHITE" />
+                  <ImageView fitHeight="22.0" fitWidth="27.0" layoutX="212.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" styleClass="search-icon">
                      <image>
                         <Image url="@icons/Search.png" />
                      </image>
                   </ImageView>
+                  <Text fill="WHITE" layoutX="402.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="24" wrappingWidth="74.97389698028564">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="58.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="298.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="December 14" wrappingWidth="106.9739580154419">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="304.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Condition" wrappingWidth="99.77394580841064" x="-3.0">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="74.0" fitWidth="83.0" layoutX="477.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true" />
+                  <Text fill="WHITE" layoutX="402.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Feels Like" wrappingWidth="150.17397022247314">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="31.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precipitation" wrappingWidth="101.37392139434814">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="158.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Humidity" wrappingWidth="87.77394580841064">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="31.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wind" wrappingWidth="45.373860359191895">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="158.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UV Index" wrappingWidth="70.17384815216064">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="18.0" fitWidth="16.0" layoutX="14.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="18.0" fitWidth="16.0" layoutX="14.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="18.0" fitWidth="16.0" layoutX="142.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="18.0" fitWidth="16.0" layoutX="142.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true" />
+                  <Text fill="WHITE" layoutX="16.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Highs to *max temp* and lows to *low temp*" wrappingWidth="283.77382373809814">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Text>
+                  <ScrollPane hbarPolicy="ALWAYS" layoutX="13.0" layoutY="276.0" prefHeight="118.0" prefWidth="273.0" vbarPolicy="NEVER">
+                     <content>
+                        <AnchorPane prefHeight="107.0" prefWidth="543.0">
+                           <children>
+                              <VBox layoutY="-2.0" prefHeight="119.0" prefWidth="44.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="4 p.m." translateX="3.0" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" translateX="7.0" translateY="7.0" />
+                                    <Text fill="WHITE" layoutX="10.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="44.0" layoutY="-2.0" prefHeight="119.0" prefWidth="44.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="4 p.m." translateX="3.0" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="88.0" layoutY="-2.0" prefHeight="119.0" prefWidth="44.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="4 p.m." translateX="3.0" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="132.0" layoutY="-2.0" prefHeight="119.0" prefWidth="44.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="4 p.m." translateX="3.0" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="176.0" layoutY="-2.0" prefHeight="119.0" prefWidth="44.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="4 p.m." translateX="3.0" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="220.0" layoutY="-2.0" prefHeight="119.0" prefWidth="44.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="4 p.m." translateX="3.0" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="272.0" layoutY="-2.0" prefHeight="119.0" prefWidth="44.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="4 p.m." translateX="3.0" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="316.0" layoutY="-2.0" prefHeight="119.0" prefWidth="44.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="4 p.m." translateX="3.0" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="360.0" layoutY="-2.0" prefHeight="119.0" prefWidth="44.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="4 p.m." translateX="3.0" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="404.0" layoutY="-2.0" prefHeight="119.0" prefWidth="44.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="4 p.m." translateX="3.0" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="448.0" layoutY="-2.0" prefHeight="119.0" prefWidth="44.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="4 p.m." translateX="3.0" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="492.0" layoutY="-2.0" prefHeight="119.0" prefWidth="44.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="4 p.m." translateX="3.0" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Text>
+                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Circle>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <Text fill="WHITE" layoutX="303.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location" translateX="-3.0" wrappingWidth="101.3739824295044">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="290.0" layoutY="80.0" minHeight="14.0" minWidth="47.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="47.0" style="-fx-background-color: #1E1E1E; -fx-background-radius: 1;" styleClass="search-icon-button" textFill="WHITE" />
+                  <ImageView fitHeight="22.0" fitWidth="27.0" layoutX="297.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true" styleClass="refresh-icon">
+                     <image>
+                        <Image url="@icons/referesh.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="339.0" layoutY="183.0" prefHeight="311.0" prefWidth="200.0" translateY="10.0">
+                     <children>
+                        <HBox prefHeight="51.0" prefWidth="200.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Tomorrow" wrappingWidth="79.7740068435669">
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                                 <font>
+                                    <Font name="System Bold Italic" size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox layoutY="51.0" prefHeight="51.0" prefWidth="200.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuesday" wrappingWidth="70.17397022247314">
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                                 <font>
+                                    <Font name="System Bold Italic" size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox layoutY="102.0" prefHeight="51.0" prefWidth="200.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Wednesday" wrappingWidth="93.3739824295044">
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                                 <font>
+                                    <Font name="System Bold Italic" size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox layoutY="156.0" prefHeight="51.0" prefWidth="200.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Thursday" wrappingWidth="93.3739824295044">
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                                 <font>
+                                    <Font name="System Bold Italic" size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox layoutY="207.0" prefHeight="51.0" prefWidth="200.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Friday" wrappingWidth="93.3739824295044">
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                                 <font>
+                                    <Font name="System Bold Italic" size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox layoutY="258.0" prefHeight="51.0" prefWidth="200.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Saturday" wrappingWidth="93.3739824295044">
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                                 <font>
+                                    <Font name="System Bold Italic" size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
                </children>
             </Pane>
          </center>
