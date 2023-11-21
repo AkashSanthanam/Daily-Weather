@@ -19,6 +19,7 @@ public class App extends Application {
     
 
     double x, y = 0; 
+    private static Controller controller; 
     
     public static void main(String[] args) {
         // Method from Application class
@@ -36,9 +37,7 @@ public class App extends Application {
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/gui_template.fxml"));
         Parent root = fxmlLoader.load();
-
-        // Parent root = FXMLLoader.load(getClass().getResource("main.fxml")); 
-        primaryStage.setScene(new Scene(root)); 
+        controller = (Controller)fxmlLoader.getController();
         // primaryStage.initStyle(StageStyle.UNDECORATED); 
 
         
@@ -53,6 +52,9 @@ public class App extends Application {
             primaryStage.setY(evt.getScreenY() - y);
         });
 
+
+        primaryStage.setScene(new Scene(root)); 
+        primaryStage.setResizable(true);
         primaryStage.show(); 
 
 
