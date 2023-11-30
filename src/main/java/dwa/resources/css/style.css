@@ -18,31 +18,8 @@
     -fx-opacity: 1; 
 }
 
-.search-icon {
-    -fx-opacity: 0.5; /* Default opacity */
-    transition: all 0.5s; /* Transition for opacity changes */
-}
 
-.search-icon:hover {
-    -fx-opacity: 0.9; /* Adjust opacity on hover */
-    -fx-effect: innershadow(gaussian, #5BA2F3, 10, 0, 0, 0); /* Apply an inner shadow on hover */
-}
-.search-icon:pressed {
-    -fx-opacity: 0.6; 
-}
 
-.refresh-icon {
-    -fx-opacity: 0.5; /* Default opacity */
-    transition: all 0.5s; /* Transition for opacity changes */
-}
-
-.refresh-icon:hover {
-    -fx-opacity: 0.9; /* Adjust opacity on hover */
-    -fx-effect: innershadow(gaussian, #5BA2F3, 10, 0, 0, 0); /* Apply an inner shadow on hover */
-}
-.refresh-icon:pressed {
-    -fx-opacity: 0.6; 
-}
 
 
 

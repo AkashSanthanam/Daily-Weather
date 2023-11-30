@@ -10,7 +10,22 @@ public class Current {
     private String wind_dir;
     private float feelslike_c;
     private float feelslike_f;
+    private float precip_mm; 
+    private float uv; 
+    private float humidity; 
 
+
+    public float get_precipMM(){
+        return this.precip_mm; 
+    }
+
+    public float get_uv(){
+        return this.uv; 
+    }
+
+    public float get_humidity(){
+        return this.humidity; 
+    }
 
     public float get_tempc(){
         return this.temp_c;
