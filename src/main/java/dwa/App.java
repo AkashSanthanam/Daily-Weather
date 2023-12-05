@@ -7,11 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-// import javafx.event.ActionEvent;
-// import javafx.event.EventHandler;
-// import javafx.scene.Scene;
-// import javafx.scene.control.Button;
-// import javafx.scene.layout.StackPane;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -38,6 +34,8 @@ public class App extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resources/gui_template.fxml"));
         Parent root = fxmlLoader.load();
         controller = (Controller)fxmlLoader.getController();
+        primaryStage.setTitle("DailyWeather");
+        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("resources/icons/appicon.png")));
         // primaryStage.initStyle(StageStyle.UNDECORATED); 
 
         

@@ -17,7 +17,7 @@ public class ForecastDay {
         return this.day; 
     }
 
-    public ArrayList<Hour> get_Hours(){
+    public ArrayList <Hour> get_Hours(){
         return this.hour; 
     }
 

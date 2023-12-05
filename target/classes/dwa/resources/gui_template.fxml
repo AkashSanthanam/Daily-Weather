@@ -39,7 +39,7 @@
             </VBox>
          </left>
          <center>
-            <Pane prefHeight="558.0" prefWidth="578.0" style="-fx-background-color: #1E1E1E; -fx-border-color: #1A1A1A; -fx-border-insets: 1 0 0 0;" BorderPane.alignment="CENTER">
+            <Pane prefHeight="500.0" prefWidth="719.0" style="-fx-background-color: #1E1E1E; -fx-border-color: #1A1A1A; -fx-border-insets: 1 0 0 0;" BorderPane.alignment="CENTER">
                <children>
                   <ImageView fx:id="weatherAppLogo" fitHeight="23.0" fitWidth="23.0" layoutX="553.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -106,7 +106,7 @@
                         <Font name="System Italic" size="13.0" />
                      </font>
                   </Text>
-                  <Text fx:id="feelsLikeTxt" fill="WHITE" layoutX="404.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="86.97401905059814">
+                  <Text fx:id="feelsLikeTxt" fill="WHITE" layoutX="408.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="117.97401905059814">
                      <effect>
                         <Glow />
                      </effect>
@@ -166,7 +166,7 @@
                         <Image url="@icons/humidity.png" />
                      </image>
                   </ImageView>
-                  <Text fx:id="currentMaxLowTemp" fill="WHITE" layoutX="16.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Highs to *max temp* and lows to *low temp*" wrappingWidth="283.77382373809814">
+                  <Text fx:id="currentMaxLowTemp" fill="WHITE" layoutX="16.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="283.77382373809814">
                      <effect>
                         <Glow />
                      </effect>
@@ -185,8 +185,8 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" translateX="7.0" translateY="7.0" />
-                                    <Text fx:id="tempHourOne" fill="WHITE" layoutX="10.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                    <ImageView fx:id="hourOneImg" fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fx:id="tempHourOne" fill="WHITE" layoutX="10.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" translateY="8.0" wrappingWidth="40.573872566223145">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -194,7 +194,7 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                    <Circle fx:id="Circle1" fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE" translateX="5.0" translateY="20.0">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -211,8 +211,8 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Text fx:id="tempHourTwo" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                    <ImageView fx:id="hourTwoImg" fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fx:id="tempHourTwo" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" translateY="8.0" wrappingWidth="32.573872566223145">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -220,7 +220,7 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                    <Circle fx:id="Circle2" fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE" translateX="5.0" translateY="20.0">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -237,8 +237,8 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Text fx:id="tempHourThree" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                    <ImageView fx:id="hourThreeImg" fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fx:id="tempHourThree" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" translateY="8.0" wrappingWidth="32.573872566223145">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -246,7 +246,7 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                    <Circle fx:id="Circle3" fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE" translateX="5.0" translateY="20.0">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -263,8 +263,8 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Text fx:id="tempHourFour" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                    <ImageView fx:id="hourFourImg" fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fx:id="tempHourFour" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" translateY="8.0" wrappingWidth="32.573872566223145">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -272,7 +272,7 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                    <Circle fx:id="Circle4" fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE" translateX="5.0" translateY="20.0">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -289,8 +289,8 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Text fx:id="tempHourFive" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                    <ImageView fx:id="hourFiveImg" fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fx:id="tempHourFive" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" translateY="8.0" wrappingWidth="32.573872566223145">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -298,7 +298,7 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                    <Circle fx:id="Circle5" fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE" translateX="5.0" translateY="20.0">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -315,8 +315,8 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Text fx:id="tempHourSix" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                    <ImageView fx:id="hourSixImg" fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fx:id="tempHourSix" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" translateY="8.0" wrappingWidth="32.573872566223145">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -324,7 +324,7 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                    <Circle fx:id="Circle6" fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE" translateX="5.0" translateY="20.0">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -341,8 +341,8 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Text fx:id="tempHourSeven" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                    <ImageView fx:id="hourSevenImg" fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fx:id="tempHourSeven" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" translateY="8.0" wrappingWidth="32.573872566223145">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -350,7 +350,7 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                    <Circle fx:id="Circle7" fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE" translateX="5.0" translateY="20.0">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -367,8 +367,8 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Text fx:id="tempHourEight" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                    <ImageView fx:id="hourEightImg" fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fx:id="tempHourEight" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" translateY="8.0" wrappingWidth="32.573872566223145">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -376,7 +376,7 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                    <Circle fx:id="Circle8" fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE" translateX="5.0" translateY="20.0">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -393,8 +393,8 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Text fx:id="tempHourNine" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                    <ImageView fx:id="hourNineImg" fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fx:id="tempHourNine" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" translateY="8.0" wrappingWidth="32.573872566223145">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -402,7 +402,7 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                    <Circle fx:id="Circle9" fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE" translateX="5.0" translateY="20.0">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -419,8 +419,8 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Text fx:id="TempHourTen" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                    <ImageView fx:id="hourTenImg" fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fx:id="tempHourTen" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" translateY="8.0" wrappingWidth="32.573872566223145">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -428,7 +428,7 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                    <Circle fx:id="Circle10" fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE" translateX="5.0" translateY="20.0">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -445,8 +445,8 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Text fx:id="tempHourEleven" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                    <ImageView fx:id="hourElevenImg" fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fx:id="tempHourEleven" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" translateY="8.0" wrappingWidth="32.573872566223145">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -454,7 +454,7 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                    <Circle fx:id="Circle11" fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE" translateX="5.0" translateY="20.0">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -471,8 +471,8 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
-                                    <Text fx:id="tempHourTwelve" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="32.573872566223145">
+                                    <ImageView fx:id="hourTwelveImg" fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Text fx:id="tempHourTwelve" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" translateY="8.0" wrappingWidth="32.573872566223145">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -480,7 +480,7 @@
                                           <Font name="System Bold" size="11.0" />
                                        </font>
                                     </Text>
-                                    <Circle fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE">
+                                    <Circle fx:id="Circle12" fill="DODGERBLUE" radius="6.0" stroke="BLACK" strokeType="INSIDE" translateX="5.0" translateY="20.0">
                                        <effect>
                                           <Glow />
                                        </effect>
@@ -507,11 +507,11 @@
                         <Glow />
                      </effect>
                   </ImageView>
-                  <Pane layoutX="301.0" layoutY="188.0" prefHeight="311.0" prefWidth="200.0" translateY="10.0">
+                  <Pane layoutX="308.0" layoutY="240.0" prefHeight="141.0" prefWidth="200.0" translateX="15.0" translateY="10.0">
                      <children>
                         <HBox prefHeight="51.0" prefWidth="200.0">
                            <children>
-                              <Text fx:id="dayOneTxt" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Tomorrow" wrappingWidth="94.1740312576294">
+                              <Text fx:id="dayOneTxt" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Today" wrappingWidth="94.1740312576294">
                                  <effect>
                                     <Glow />
                                  </effect>
@@ -520,15 +520,7 @@
                                  </font>
                               </Text>
                               <ImageView fx:id="weatherLogoDayOne" fitHeight="27.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" />
-                              <Text fx:id="maxTempDayOne" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="5" wrappingWidth="32.573872566223145">
-                                 <effect>
-                                    <Glow />
-                                 </effect>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Text>
-                              <Text fx:id="lowTempDayOne" fill="WHITE" layoutX="121.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" wrappingWidth="32.573872566223145">
+                              <Text fx:id="avgTempDayOne" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="5" translateX="10.0" wrappingWidth="32.573872566223145">
                                  <effect>
                                     <Glow />
                                  </effect>
@@ -540,7 +532,7 @@
                         </HBox>
                         <HBox layoutY="51.0" prefHeight="51.0" prefWidth="200.0">
                            <children>
-                              <Text fx:id="dayTwoTxt" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuesday" wrappingWidth="92.57399463653564">
+                              <Text fx:id="dayTwoTxt" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Tomorrow" wrappingWidth="92.57399463653564">
                                  <effect>
                                     <Glow />
                                  </effect>
@@ -549,15 +541,7 @@
                                  </font>
                               </Text>
                               <ImageView fx:id="weatherLogoDayTwo" fitHeight="27.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" />
-                              <Text fx:id="maxTempDayTwo" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="5" wrappingWidth="32.573872566223145">
-                                 <effect>
-                                    <Glow />
-                                 </effect>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Text>
-                              <Text fx:id="lowTempDayTwo" fill="WHITE" layoutX="112.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" wrappingWidth="32.573872566223145">
+                              <Text fx:id="avgTempDayTwo" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="5" translateX="10.0" wrappingWidth="32.573872566223145">
                                  <effect>
                                     <Glow />
                                  </effect>
@@ -569,7 +553,7 @@
                         </HBox>
                         <HBox layoutY="102.0" prefHeight="51.0" prefWidth="200.0">
                            <children>
-                              <Text fx:id="dayThreeTxt" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Wednesday" wrappingWidth="93.3739824295044">
+                              <Text fx:id="dayThreeTxt" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Day after tomorrow" wrappingWidth="93.3739824295044">
                                  <effect>
                                     <Glow />
                                  </effect>
@@ -578,102 +562,7 @@
                                  </font>
                               </Text>
                               <ImageView fx:id="weatherLogoDayThree" fitHeight="27.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" />
-                              <Text fx:id="maxTempDayThree" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="5" wrappingWidth="32.573872566223145">
-                                 <effect>
-                                    <Glow />
-                                 </effect>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Text>
-                              <Text fx:id="lowTempDayThree" fill="WHITE" layoutX="135.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" wrappingWidth="32.573872566223145">
-                                 <effect>
-                                    <Glow />
-                                 </effect>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </HBox>
-                        <HBox layoutY="156.0" prefHeight="51.0" prefWidth="200.0">
-                           <children>
-                              <Text fx:id="dayFourTxt" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Thursday" wrappingWidth="93.3739824295044">
-                                 <effect>
-                                    <Glow />
-                                 </effect>
-                                 <font>
-                                    <Font name="System Bold Italic" size="15.0" />
-                                 </font>
-                              </Text>
-                              <ImageView fx:id="weatherLogoDayFour" fitHeight="27.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" />
-                              <Text fx:id="maxTempDayFour" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="5" wrappingWidth="32.573872566223145">
-                                 <effect>
-                                    <Glow />
-                                 </effect>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Text>
-                              <Text fx:id="lowTempDayFour" fill="WHITE" layoutX="135.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" wrappingWidth="32.573872566223145">
-                                 <effect>
-                                    <Glow />
-                                 </effect>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </HBox>
-                        <HBox fx:id="daySixTxt" layoutY="207.0" prefHeight="51.0" prefWidth="200.0">
-                           <children>
-                              <Text fx:id="dayFiveTxt" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Friday" wrappingWidth="93.3739824295044">
-                                 <effect>
-                                    <Glow />
-                                 </effect>
-                                 <font>
-                                    <Font name="System Bold Italic" size="15.0" />
-                                 </font>
-                              </Text>
-                              <ImageView fx:id="weatherLogoDayFive" fitHeight="27.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" />
-                              <Text fx:id="maxTempDayFive" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="5" wrappingWidth="32.573872566223145">
-                                 <effect>
-                                    <Glow />
-                                 </effect>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Text>
-                              <Text fx:id="lowTempDayFive" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="5" wrappingWidth="32.573872566223145">
-                                 <effect>
-                                    <Glow />
-                                 </effect>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </HBox>
-                        <HBox layoutY="258.0" prefHeight="51.0" prefWidth="200.0">
-                           <children>
-                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Saturday" wrappingWidth="93.3739824295044">
-                                 <effect>
-                                    <Glow />
-                                 </effect>
-                                 <font>
-                                    <Font name="System Bold Italic" size="15.0" />
-                                 </font>
-                              </Text>
-                              <ImageView fx:id="weatherLogoDaySix" fitHeight="27.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" />
-                              <Text fx:id="maxTempDaySix" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="5" wrappingWidth="32.573872566223145">
-                                 <effect>
-                                    <Glow />
-                                 </effect>
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Text>
-                              <Text fx:id="lowTempDaySix" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="5" wrappingWidth="32.573872566223145">
+                              <Text fx:id="avgTempDayThree" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="5" translateX="10.0" wrappingWidth="32.573872566223145">
                                  <effect>
                                     <Glow />
                                  </effect>
@@ -685,9 +574,10 @@
                         </HBox>
                      </children>
                   </Pane>
-                  <ImageView fx:id="weatherLogo" fitHeight="58.0" fitWidth="60.0" layoutX="501.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="weatherLogo" fitHeight="58.0" fitWidth="60.0" layoutX="506.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="18.0" fitWidth="17.0" layoutX="283.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@icons/snowing.png" />
+                        <Image url="@icons/location.png" />
                      </image>
                   </ImageView>
                </children>

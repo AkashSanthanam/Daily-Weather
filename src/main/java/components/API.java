@@ -7,6 +7,10 @@ import java.net.http.HttpResponse;
 // import java.net.http.HttpResponse.BodyHandler;
 import java.net.http.HttpResponse.BodyHandlers;
 import java.time.Duration;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,7 +54,7 @@ public class API {
 
     public Weather get_forecast(String _q) throws Exception{
 
-        String url = "http://api.weatherapi.com/v1/forecast.json?key=" + API_KEY + "&q=" + _q + "&days=2&aqi=no&alerts=no"; 
+        String url = "http://api.weatherapi.com/v1/forecast.json?key=" + API_KEY + "&q=" + _q + "&days=3&aqi=no&alerts=no"; 
 
         HttpRequest request = HttpRequest.newBuilder()
                               .GET()
@@ -74,18 +78,20 @@ public class API {
         Gson gson = new Gson();
         return gson.fromJson(response.body(), Weather.class); 
     }
+
+     
     
     public static void main(String[] args) throws Exception{
 
             API test = new API();
-            // Weather weatherData = test.get_weather("London");
-            // System.out.println("Country: " + weatherData.get_location().get_country() + "\n");
-            // System.out.println("Temperature: " + weatherData.get_current().get_tempc() + "\n");
-            // System.out.println("Feels Like " + weatherData .get_current().get_feelslikec() + "\n");
+            Weather weatherData = test.get_weather("Toronto");
             Weather forecastData = test.get_forecast("Toronto"); 
-            System.out.println("Forecast Day 1# " + forecastData.get_Forecast().get_ForecastDays().get(0));
-            System.out.println("Forecast Day 2# " + forecastData.get_Forecast().get_ForecastDays().get(1));
-                
+            System.out.println("Forecast Day 1# Hours " + forecastData.get_Forecast().get_ForecastDays().get(0).get_Hours());
+            System.out.println("Hour 1# " + forecastData.get_Forecast().get_ForecastDays().get(0).get_Hours().get(24));
+            System.out.println(weatherData.get_location().get_localtime());
+
+
+   
         
     }
 

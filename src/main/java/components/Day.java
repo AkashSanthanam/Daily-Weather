@@ -3,9 +3,19 @@ package components;
 public class Day {
     private float avgtemp_c;
     private float avgtemp_f; 
+    private float maxtemp_c;
+    private float mintemp_c; 
     private float totalprecip_mm;
     private Condition condition; 
 
+
+    public float get_maxtempc(){
+        return this.maxtemp_c; 
+    }
+
+    public float get_mintempc(){
+        return this.mintemp_c;
+    }
 
     public float get_avgtempc(){
         return this.avgtemp_c; 
@@ -21,7 +31,7 @@ public class Day {
     }
 
 
-    public Condition get_Condition(){
+    public Condition get_condition(){
         return this.condition;
     }
 
